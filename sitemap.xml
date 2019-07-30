@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://eicky.com/tags/index.html</loc>
+    <loc>https://eicky.com/categories/index.html</loc>
     
     <lastmod>2019-07-12T09:47:54.737Z</lastmod>
     
@@ -16,7 +16,7 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/categories/index.html</loc>
+    <loc>https://eicky.com/tags/index.html</loc>
     
     <lastmod>2019-07-12T09:47:54.737Z</lastmod>
     
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2018/01/06/DS/</loc>
+    <loc>https://eicky.com/2018/01/07/DS/</loc>
     
     <lastmod>2019-07-12T09:47:54.734Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2018/01/07/DS/</loc>
+    <loc>https://eicky.com/2018/01/06/DS/</loc>
     
     <lastmod>2019-07-12T09:47:54.734Z</lastmod>
     
@@ -352,21 +352,14 @@
   </url>
   
   <url>
+    <loc>https://eicky.com/2016/05/09/blog/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.729Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eicky.com/2016/08/18/git/</loc>
-    
-    <lastmod>2019-07-12T09:47:54.729Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eicky.com/2016/01/01/template/</loc>
-    
-    <lastmod>2019-07-12T09:47:54.729Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eicky.com/2016/05/23/linux/</loc>
     
     <lastmod>2019-07-12T09:47:54.729Z</lastmod>
     
@@ -380,7 +373,14 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2016/05/09/blog/</loc>
+    <loc>https://eicky.com/2016/05/23/linux/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.729Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/2016/01/01/template/</loc>
     
     <lastmod>2019-07-12T09:47:54.729Z</lastmod>
     
