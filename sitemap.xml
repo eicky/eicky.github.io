@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eicky.com/2019/11/04/linux/</loc>
+    
+    <lastmod>2019-11-04T06:37:03.646Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eicky.com/2019/10/24/aliyun/</loc>
     
     <lastmod>2019-10-24T08:36:34.364Z</lastmod>
@@ -16,21 +23,7 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/about/index.html</loc>
-    
-    <lastmod>2019-07-12T09:47:54.737Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://eicky.com/categories/index.html</loc>
-    
-    <lastmod>2019-07-12T09:47:54.737Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eicky.com/2019/05/08/linux/</loc>
     
     <lastmod>2019-07-12T09:47:54.737Z</lastmod>
     
@@ -44,14 +37,28 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2019/02/14/kotlin/</loc>
+    <loc>https://eicky.com/2019/05/08/linux/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.737Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/about/index.html</loc>
+    
+    <lastmod>2019-07-12T09:47:54.737Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/2019/01/29/linux/</loc>
     
     <lastmod>2019-07-12T09:47:54.736Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2019/04/26/linux/</loc>
+    <loc>https://eicky.com/2019/04/04/linux/</loc>
     
     <lastmod>2019-07-12T09:47:54.736Z</lastmod>
     
@@ -79,28 +86,28 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2019/01/29/linux/</loc>
+    <loc>https://eicky.com/2019/02/14/kotlin/</loc>
     
     <lastmod>2019-07-12T09:47:54.736Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2019/04/04/linux/</loc>
+    <loc>https://eicky.com/2019/04/26/linux/</loc>
     
     <lastmod>2019-07-12T09:47:54.736Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2019/01/17/sms/</loc>
+    <loc>https://eicky.com/2018/01/10/HEXO/</loc>
     
     <lastmod>2019-07-12T09:47:54.735Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2018/01/10/HEXO/</loc>
+    <loc>https://eicky.com/2019/01/17/sms/</loc>
     
     <lastmod>2019-07-12T09:47:54.735Z</lastmod>
     
@@ -163,7 +170,7 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2018/01/01/DS/</loc>
+    <loc>https://eicky.com/2017/08/31/linux/</loc>
     
     <lastmod>2019-07-12T09:47:54.733Z</lastmod>
     
@@ -177,13 +184,6 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2018/01/02/DS/</loc>
-    
-    <lastmod>2019-07-12T09:47:54.733Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://eicky.com/2018/01/04/DS/</loc>
     
     <lastmod>2019-07-12T09:47:54.733Z</lastmod>
@@ -191,14 +191,21 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/08/31/linux/</loc>
+    <loc>https://eicky.com/2018/01/02/DS/</loc>
     
     <lastmod>2019-07-12T09:47:54.733Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/07/07/linux/</loc>
+    <loc>https://eicky.com/2018/01/01/DS/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.733Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/2017/07/05/linux/</loc>
     
     <lastmod>2019-07-12T09:47:54.732Z</lastmod>
     
@@ -212,21 +219,7 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/05/31/android/</loc>
-    
-    <lastmod>2019-07-12T09:47:54.732Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://eicky.com/2017/06/15/linux/</loc>
-    
-    <lastmod>2019-07-12T09:47:54.732Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eicky.com/2017/05/25/java/</loc>
     
     <lastmod>2019-07-12T09:47:54.732Z</lastmod>
     
@@ -240,14 +233,28 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/07/09/linux/</loc>
+    <loc>https://eicky.com/2017/05/31/android/</loc>
     
     <lastmod>2019-07-12T09:47:54.732Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/07/05/linux/</loc>
+    <loc>https://eicky.com/2017/05/25/java/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.732Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/2017/07/07/linux/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.732Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/2017/07/09/linux/</loc>
     
     <lastmod>2019-07-12T09:47:54.732Z</lastmod>
     
@@ -275,21 +282,7 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/05/10/java/</loc>
-    
-    <lastmod>2019-07-12T09:47:54.731Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://eicky.com/2017/05/11/java/</loc>
-    
-    <lastmod>2019-07-12T09:47:54.731Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eicky.com/2017/05/20/android/</loc>
     
     <lastmod>2019-07-12T09:47:54.731Z</lastmod>
     
@@ -303,14 +296,28 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/04/08/android/</loc>
+    <loc>https://eicky.com/2017/05/20/android/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.731Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/2017/05/10/java/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.731Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/2017/03/29/android/</loc>
     
     <lastmod>2019-07-12T09:47:54.730Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/03/29/android/</loc>
+    <loc>https://eicky.com/2017/04/08/android/</loc>
     
     <lastmod>2019-07-12T09:47:54.730Z</lastmod>
     
@@ -331,13 +338,6 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2017/02/04/android/</loc>
-    
-    <lastmod>2019-07-12T09:47:54.730Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://eicky.com/2016/11/07/android/</loc>
     
     <lastmod>2019-07-12T09:47:54.730Z</lastmod>
@@ -345,7 +345,7 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2016/09/14/android/</loc>
+    <loc>https://eicky.com/2017/02/04/android/</loc>
     
     <lastmod>2019-07-12T09:47:54.730Z</lastmod>
     
@@ -359,14 +359,21 @@
   </url>
   
   <url>
-    <loc>https://eicky.com/2016/05/09/blog/</loc>
+    <loc>https://eicky.com/2016/09/14/android/</loc>
+    
+    <lastmod>2019-07-12T09:47:54.730Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eicky.com/2016/08/18/git/</loc>
     
     <lastmod>2019-07-12T09:47:54.729Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eicky.com/2016/08/18/git/</loc>
+    <loc>https://eicky.com/2016/05/09/blog/</loc>
     
     <lastmod>2019-07-12T09:47:54.729Z</lastmod>
     

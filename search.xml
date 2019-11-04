@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[让aws、gcp、oracle等机器使用root账户登录]]></title>
+    <url>%2F2019%2F11%2F04%2Flinux%2F</url>
+    <content type="text"><![CDATA[[toc] 让aws、gcp、oracle等机器使用root账户登录先使用能登录的方式登录上vps 切换到root sudo -i 修改root密码(如果不用密码登录使用public_key方式登录，这一步可以跳过) 12345sudo passwd root Enter new UNIX password:#输入自己设置的新密码 Retype new UNIX password:#再次输入 更改登录方式 12345678#开启PasswordAuthentication 和 PermitRootLogin vim /etc/ssh/sshd_config #将下面两个值设置成yes，如果注释了把注释取消掉 PasswordAuthentication yesPermitRootLogin yes 重启ssh服务 service sshd restart 使用root账户登录 ssh root@ip -p port 注：如果使用public_key方式登录，就把客户端电脑的id_rsa.pub文件内容复制到服务器的.ssh目录下的authorized_keys文件中(如果没有这个文件和文件夹就创建一个) 附：生成public_key命令，windows可以安装一个git bash，mac直接终端执行 ssh-keygen -t rsa -C &quot;email@example.com&quot; 更简单的方式1234echo root:要修改的密码 |sudo chpasswd rootsudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config;sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config;sudo service sshd restart]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>root登录</tag>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[1024节最便宜的猪肉]]></title>
     <url>%2F2019%2F10%2F24%2Faliyun%2F</url>
     <content type="text"><![CDATA[[toc] 比猪肉还便宜的服务器有木有？ 阿里云2019年双十一活动，全线ECS云主机一折购 ECS突发性能型t5 1核/2G/40G 1M宽带 86元/每年 ECS突发性能型t5 1核/2G/40G 1M宽带 229元3年 ECS共享型n4 2核/4G/40G 3M宽带 799元3年 ECS共享通用型mn4 2核/8G/40G 5M宽带 1399元3年 突发性能t5 香港 1核/1G/40G 1M宽带 119元/每年 国内短信套餐包 5000条 160元/2年 划重点: 285三年1399，一天也就1块钱，强烈推荐 活动地址: 直达链接]]></content>
