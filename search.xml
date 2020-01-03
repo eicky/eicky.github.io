@@ -66,7 +66,7 @@
   <entry>
     <title><![CDATA[Docker的基础操作]]></title>
     <url>%2F2019%2F05%2F06%2Fdocker%2F</url>
-    <content type="text"><![CDATA[[toc] Docker是什么Docker是一个轻量级容器技术，有点类似虚拟机技术（xen、kvm、vmware、virtual）。Docker直接运行在当前操作系统智商，不是运行在虚拟机中，但是实现了虚拟机技术的资源格力，性能远远高于虚拟机技术。 Docker支持将软件编译成一个镜像(image)，然后在镜像中做好对软件的各种配置，然后发布镜像，使用者可以运行这个镜像，运行中的镜像称之为容器(container)，容器的启动是非常快的，基本都是秒。感觉有点像我们平时安装ghost操作系统？系统安装好后软件都有了，虽然完全不是一种东西，但是思路是类似的。 Docker安装 CentOS 12sudo yum updatesudo yum install docker Ubuntu 12sudo apt-get updatesudo apt-get docker.io Windows 1祭出度娘 -&gt; Boot2Docker然后傻瓜式安装 Docker常用命令及参数Docker镜像命令 Docker镜像检索（可以到https://registry.hub.docker.com）上搜索 12docker search 镜像名eg: docker search mysql 镜像下载 12docker pull 镜像名eg: docker pull mysql 查看本地镜像列表 1docker images 镜像删除 12docker rmi image-id (注：image-id可以通过上面的查看本地镜像列表查看)docker rmi $(docker images -q) （这个骚操作是删除所有镜像，一般别这么干） Docker 容器命令 运行容器 123docker run --name container-name -d image-name其中--name是你为容器取的名称供你自己以后查看；-d表示detached，意思执行玩这句命令后控制台将不会被阻碍，可以继续输入命令操 作， image-name是你要使用的哪个镜像（当然你得先下载下来，pull命令）eg: docker run --name mysql-test -d mysql 查看运行中的容器列表 12docker psdocker ps -a （注：这个命令是用来查看所有容器的，也就是运行和停止状态的都展示出来，类似ls -a?） 停止容器 123docker stop container-name/container-id可以通过容器名称或者容器id来停止容器eg: docker stop mysql-test 启动容器 12docker start container-name/container-ideg:docker start mysql-test 端口映射 12为啥要用到这个？因为docker运行中使用的端口在本机和本机局域网不通，需要把docker容器中的端口映射到当前主机的端口上，这样局域网 就能访问了eg: docker run -d -p 3306:3306 --name port-test mysql 删除容器 123docker rm container-iddocker rm $(docker ps -a -q)这两个命令我相信你完全看得懂，一个删除单个，一个删除全部 容器日志 12docker logs container-name/container-ideg: docker logs lili-port-test 登录容器（也就是进入相应的容器，然后进行一些shell操作） 1docker exec -it container-id/container-name bash emmm，大致基本的操作就这些，后面我再看看还有些啥东西，我再补充，毕竟是遇到问题了，才好找对应方案。]]></content>
+    <content type="text"><![CDATA[[toc] Docker是什么Docker是一个轻量级容器技术，有点类似虚拟机技术（xen、kvm、vmware、virtual）。Docker直接运行在当前操作系统智商，不是运行在虚拟机中，但是实现了虚拟机技术的资源格力，性能远远高于虚拟机技术。 Docker支持将软件编译成一个镜像(image)，然后在镜像中做好对软件的各种配置，然后发布镜像，使用者可以运行这个镜像，运行中的镜像称之为容器(container)，容器的启动是非常快的，基本都是秒。感觉有点像我们平时安装ghost操作系统？系统安装好后软件都有了，虽然完全不是一种东西，但是思路是类似的。 Docker安装 CentOS6 12345rpm -iUvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpmyum update -yyum -y install docker-ioservice docker startchkconfig docker on CentOS 7、Debian、Ubuntu 123curl -sSL https://get.docker.com/ | shsystemctl start dockersystemctl enable docker Windows 1祭出度娘 -&gt; Boot2Docker然后傻瓜式安装 Docker常用命令及参数Docker镜像命令 Docker镜像检索（可以到https://registry.hub.docker.com）上搜索 12docker search 镜像名eg: docker search mysql 镜像下载 12docker pull 镜像名eg: docker pull mysql 查看本地镜像列表 1docker images 镜像删除 12docker rmi image-id (注：image-id可以通过上面的查看本地镜像列表查看)docker rmi $(docker images -q) （这个骚操作是删除所有镜像，一般别这么干） Docker 容器命令 运行容器 123docker run --name container-name -d image-name其中--name是你为容器取的名称供你自己以后查看；-d表示detached，意思执行玩这句命令后控制台将不会被阻碍，可以继续输入命令操 作， image-name是你要使用的哪个镜像（当然你得先下载下来，pull命令）eg: docker run --name mysql-test -d mysql 查看运行中的容器列表 12docker psdocker ps -a （注：这个命令是用来查看所有容器的，也就是运行和停止状态的都展示出来，类似ls -a?） 停止容器 123docker stop container-name/container-id可以通过容器名称或者容器id来停止容器eg: docker stop mysql-test 启动容器 12docker start container-name/container-ideg:docker start mysql-test 端口映射 12为啥要用到这个？因为docker运行中使用的端口在本机和本机局域网不通，需要把docker容器中的端口映射到当前主机的端口上，这样局域网 就能访问了eg: docker run -d -p 3306:3306 --name port-test mysql 删除容器 123docker rm container-iddocker rm $(docker ps -a -q)这两个命令我相信你完全看得懂，一个删除单个，一个删除全部 容器日志 12docker logs container-name/container-ideg: docker logs lili-port-test 登录容器（也就是进入相应的容器，然后进行一些shell操作） 1docker exec -it container-id/container-name bash emmm，大致基本的操作就这些，后面我再看看还有些啥东西，我再补充，毕竟是遇到问题了，才好找对应方案。]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -135,6 +135,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[国内国外免费接收短信验证码：国外14个网站国内1个网站]]></title>
+    <url>%2F2019%2F01%2F17%2Fsms%2F</url>
+    <content type="text"><![CDATA[[toc] 国内国外免费接收短信验证码：国外14个网站国内1个网站 分享一些国内国外的短信验证码接收网站，注册某些网站的时候可以临时用一下，重要网站不要用这个注册！ SMSReceiveFree：https://smsreceivefree.com/Receive SMS Online for FREE：https://www.receive-sms-online.info/Receive a SMS Online：https://receive-a-sms.com/Free SMS Numbers Online：https://smsnumbersonline.com/Receive SMS online for Free：https://sms-online.co/receive-free-smsReceive-SMS：https://receive-sms.com/Receive FREE SMS online：http://receivefreesms.com/RECEIVE SMS ONLINE：https://www.receivesmsonline.net/Free Online Phone：https://www.freeonlinephone.org/Receive SMS Online：http://receive-sms-online.com/TextNow：https://www.textnow.com/Textfree：https://www.pinger.com/text-free/SELLAITE：http://sms.sellaite.com/Twilio：https://www.twilio.com/国内接码：https://www.pdflibr.com/ 经本人测试，最后一个比较靠谱，国内国外都能到达，速度也还可以 转自原文链接]]></content>
+      <categories>
+        <category>sms</category>
+      </categories>
+      <tags>
+        <tag>sms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac 上 Class JavaLaunchHelper is implemented in both 报错]]></title>
     <url>%2F2019%2F01%2F17%2Fjava%2F</url>
     <content type="text"><![CDATA[[toc] Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/java (0x10d19c4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10ea194e0). One of the two will be used. Which one is undefined. 昨晚在Mac上装了Intellij Idea，随手用IJ带的Java工程模板创建了一个测试工程，控制台报了这样一个Error。 意思是这个JavaLaunchHelper类被实现了两次。无奈之下搜索了万能的Stack Overflow，找到了解决方案。http://stackoverflow.com/questions/43003012/objc3648-class-javalaunchhelper-is-implemented-in-both引用高票回答如下 You can find all the details here: IDEA-170117 “objc: Class JavaLaunchHelper is implemented in both …” warning in Run consoles It’s the old bug in Java on Mac that got triggered by the Java Agent being used by the IDE when starting the app. This message is harmless and is safe to ignore. Oracle developer’s comment: The message is benign, there is no negative impact from this problem since both copies of that class are identical (compiled from the exact same source). It is purely a cosmetic issue. The problem is fixed in Java 9 and in Java 8 update 152. If it annoys you or affects your apps in any way, the workaround for IntelliJ IDEA is to disable idea_rt launcher agent by adding idea.no.launcher=true into idea.properties (Help | Edit Custom Properties…). 这位外国码友清楚地解释了这个Error的原因，大概意思是说这是Mac上面Java的一个老Bug了，会在那些使用了Java Agent的IDE上运行应用时触发，但这个Error对程序是无影响的，可以无视。在Java 9和Java 1.8.152版本里已经修复了。 解决方案: 点击IJ最上面菜单的Help-Edit Custom Properties，没有这个properties文件的话，IJ会提示创建，然后在里面加上 idea.no.launcher=true 转自原文链接]]></content>
@@ -144,17 +155,6 @@
       <tags>
         <tag>java</tag>
         <tag>idea</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[国内国外免费接收短信验证码：国外14个网站国内1个网站]]></title>
-    <url>%2F2019%2F01%2F17%2Fsms%2F</url>
-    <content type="text"><![CDATA[[toc] 国内国外免费接收短信验证码：国外14个网站国内1个网站 分享一些国内国外的短信验证码接收网站，注册某些网站的时候可以临时用一下，重要网站不要用这个注册！ SMSReceiveFree：https://smsreceivefree.com/Receive SMS Online for FREE：https://www.receive-sms-online.info/Receive a SMS Online：https://receive-a-sms.com/Free SMS Numbers Online：https://smsnumbersonline.com/Receive SMS online for Free：https://sms-online.co/receive-free-smsReceive-SMS：https://receive-sms.com/Receive FREE SMS online：http://receivefreesms.com/RECEIVE SMS ONLINE：https://www.receivesmsonline.net/Free Online Phone：https://www.freeonlinephone.org/Receive SMS Online：http://receive-sms-online.com/TextNow：https://www.textnow.com/Textfree：https://www.pinger.com/text-free/SELLAITE：http://sms.sellaite.com/Twilio：https://www.twilio.com/国内接码：https://www.pdflibr.com/ 经本人测试，最后一个比较靠谱，国内国外都能到达，速度也还可以 转自原文链接]]></content>
-      <categories>
-        <category>sms</category>
-      </categories>
-      <tags>
-        <tag>sms</tag>
       </tags>
   </entry>
   <entry>
