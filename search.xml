@@ -13,31 +13,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[1024节最便宜的猪肉]]></title>
-    <url>%2F2019%2F10%2F24%2Faliyun%2F</url>
-    <content type="text"><![CDATA[[toc] 比猪肉还便宜的服务器有木有？ 阿里云2019年双十一活动，全线ECS云主机一折购 ECS突发性能型t5 1核/2G/40G 1M宽带 86元/每年 ECS突发性能型t5 1核/2G/40G 1M宽带 229元3年 ECS共享型n4 2核/4G/40G 3M宽带 799元3年 ECS共享通用型mn4 2核/8G/40G 5M宽带 1399元3年 突发性能t5 香港 1核/1G/40G 1M宽带 119元/每年 国内短信套餐包 5000条 160元/2年 划重点: 285三年1399，一天也就1块钱，强烈推荐 活动地址: 直达链接]]></content>
-      <categories>
-        <category>aliyun</category>
-      </categories>
-      <tags>
-        <tag>vps</tag>
-        <tag>aliyun</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[让aws、gcp等机器使用root账户登录]]></title>
-    <url>%2F2019%2F09%2F20%2Flinux%2F</url>
-    <content type="text"><![CDATA[[toc] 让aws、gcp等机器使用root账户登录先使用能登录的方式登录上vps 切换到root sudo -i 修改root密码(如果不用密码登录使用public_key方式登录，这一步可以跳过) 12345sudo passwd root Enter new UNIX password:#输入自己设置的新密码 Retype new UNIX password:#再次输入 更改登录方式 12345678#开启PasswordAuthentication 和 PermitRootLogin vim /etc/ssh/sshd_config #将下面两个值设置成yes，如果注释了把注释取消掉 PasswordAuthentication yesPermitRootLogin yes 重启ssh服务 service sshd restart 使用root账户登录 ssh root@ip -p port 注：如果使用public_key方式登录，就把客户端电脑的id_rsa.pub文件内容复制到服务器的.ssh目录下的authorized_keys文件中(如果没有这个文件和文件夹就创建一个) 附：生成public_key命令，windows可以安装一个git bash，mac直接终端执行 ssh-keygen -t rsa -C &quot;email@example.com&quot;]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>aws</tag>
-        <tag>gcp</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[服务器承载网络（线路类型）]]></title>
     <url>%2F2019%2F05%2F08%2Flinux%2F</url>
     <content type="text"><![CDATA[[toc] 今天来讲下小鸡(国外vps或者服务器)的线路问题 先了解几个线路概念 电信163骨干网或者163骨干网 电信骨干网络，通常就是我们说的163骨干网，也就是我们通常说的AS4134接入的带宽，是中国电信的骨干网络，也就是我们经常看到202.97开头的节点，此网络负责了90%的电信业务负载（163有电信整个海外出口的90%带宽容量），因为用的人多，线路没有优化，所以在晚高峰会出现线路卡顿，以及丢包率高的情况。 CN2 英文Chinatelecom Next Carrier Network，中文为中国电信下一代承载网，缩写为CNCN或者CN2。 CN2 GT GT即Global Transit，省级出口为202.97节点，在跨境时才进入CN2骨干网，出国/国际跨境节点为59.43开头。线路总体情况良好，负载较中等，因此可以保证良好的速度和延迟。省级/出国节点为202.97开头，国际骨干节点有59.43开头的CN2节点。在CN2等级低，好于163骨干网。 CN2 GIA GIA即Global Internet Access，等级最高，在速度和延迟上有极好的体验。属于CN2里面的明星产品，在CN2里面等级最高，去程和回程全部都走59.43高速节点。CN2 GIA线路一般比较稳定，丢包率低。 三网CN2 GIA 一般来说电信用户会走CN2 GIA线路，但是有些商家优化路由，让移动、联通用户也走CN2 GIA，速度比直连要理想。 如何判断线路类型我们可以用ipip.net提供的traceroute查看我们的去程就能看到服务器的线路了 163骨干网 可以看到整个路由节点信息中，全程没有59.43高速cn2节点，并且一些省级或者出口节点是以202.97开头的，所以我们就可以判断承载网络就是163骨干网（其实就是普通线路） CN2 GT 在路由节点中，出现了59.43开头的节点，但是在一些出口节点，仍然是202.97开头的节点，这就是CN2 GT线路 CN2 GIA 从这个路由节点来看，就知道这肯定是明显线路了，也就是CN2 GIA，全程59.43节点，没有出现202.97节点，所以此承载网络就是CN2 GIA，延迟也能看出这个线路的优质，跳数也比较少 线路决定了你的服务器访问速度，以及你的扶墙速度，当你需要优化服务器访问速度的时候，就可以优化一下线路。你可以用BestTrace查看你当前的网络到你服务器的去程和回程。也可以通过中间节点的延迟判断线路哪里出了问题，然后就可以找vps商家扯皮了。]]></content>
