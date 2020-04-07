@@ -2069,7 +2069,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #444d9d;
+  background: #91acff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2956,7 +2956,7 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("https://img.eicky.com/images/2019/12/23/SC01C25.jpg") no-repeat;
+  background: url("https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/SC01C25.jpg") no-repeat;
 /* 背景图垂直、水平均居中 */
   background-position: center center;
 /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
