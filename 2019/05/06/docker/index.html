@@ -144,7 +144,7 @@
 <meta property="og:site_name" content="Eicky Blog">
 <meta property="og:description" content="[toc]  Docker是什么Docker是一个轻量级容器技术，有点类似虚拟机技术（xen、kvm、vmware、virtual）。Docker直接运行在当前操作系统智商，不是运行在虚拟机中，但是实现了虚拟机技术的资源格力，性能远远高于虚拟机技术。 Docker支持将软件编译成一个镜像(image)，然后在镜像中做好对软件的各种配置，然后发布镜像，使用者可以运行这个镜像，运行中的镜像称之为容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-03T11:22:16.015Z">
+<meta property="og:updated_time" content="2020-07-27T07:35:49.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker的基础操作">
 <meta name="twitter:description" content="[toc]  Docker是什么Docker是一个轻量级容器技术，有点类似虚拟机技术（xen、kvm、vmware、virtual）。Docker直接运行在当前操作系统智商，不是运行在虚拟机中，但是实现了虚拟机技术的资源格力，性能远远高于虚拟机技术。 Docker支持将软件编译成一个镜像(image)，然后在镜像中做好对软件的各种配置，然后发布镜像，使用者可以运行这个镜像，运行中的镜像称之为容">
@@ -426,8 +426,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-01-03T19:22:16+08:00">
-                2020-01-03
+              <time title="更新于" itemprop="dateModified" datetime="2020-07-27T15:35:49+08:00">
+                2020-07-27
               </time>
             
           </span>
@@ -487,7 +487,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  810
+                  883
                 </span>
               
 
@@ -503,7 +503,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -598,6 +598,27 @@
 <ul>
 <li><p>登录容器（也就是进入相应的容器，然后进行一些shell操作）</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it container-id/container-name bash</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>列出所有的容器 ID</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -aq</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>停止所有的容器</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>删除所有的容器</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除所有的镜像</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制文件</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker cp mycontainer:/opt/file.txt /opt/local/</span><br><span class="line">docker cp /opt/local/file.txt mycontainer:/opt/</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>emmm，大致基本的操作就这些，后面我再看看还有些啥东西，我再补充，毕竟是遇到问题了，才好找对应方案。</p>
@@ -996,7 +1017,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">38.2k</span>
+    <span title="Site words total count">38.3k</span>
   
   <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备19054370号-2</a> 
 </div>
