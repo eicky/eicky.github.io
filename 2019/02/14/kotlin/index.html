@@ -144,12 +144,12 @@
 <meta property="og:site_name" content="Eicky Blog">
 <meta property="og:description" content="[toc]   详细的可以看这一篇文章： 《Do not always trust @JvmOverloads》   @JvmOverloads 注解是用来干嘛的？12345678910  /** * Instructs the Kotlin compiler to generate overloads for this function that substitute default par">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/2874486-b6becd80c300f654.png">
-<meta property="og:updated_time" content="2019-07-12T09:47:54.736Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/2874486-b6becd80c300f654.png">
+<meta property="og:updated_time" content="2020-07-27T07:58:56.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin @JvmOverloads 自定义 View 的坑">
 <meta name="twitter:description" content="[toc]   详细的可以看这一篇文章： 《Do not always trust @JvmOverloads》   @JvmOverloads 注解是用来干嘛的？12345678910  /** * Instructs the Kotlin compiler to generate overloads for this function that substitute default par">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/2874486-b6becd80c300f654.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/2874486-b6becd80c300f654.png">
 
 
 
@@ -428,8 +428,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-12T17:47:54+08:00">
-                2019-07-12
+              <time title="更新于" itemprop="dateModified" datetime="2020-07-27T15:58:56+08:00">
+                2020-07-27
               </time>
             
           </span>
@@ -542,7 +542,7 @@
 <p>我们先看看 EditText 的构造函数， 如果是XML来写的布局，那么会调用第二个构造函数，也就是 public EditText(Context context, AttributeSet attrs) , 那么默认传入的 样式 defStyleAttr 就是 com.android.internal.R.attr.editTextStyle</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EditText</span> <span class="title">extends</span> <span class="title">TextView</span> </span>&#123;</span><br><span class="line">   <span class="keyword">public</span> EditText(Context context) &#123;</span><br><span class="line">       <span class="keyword">this</span>(context, <span class="literal">null</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> EditText(Context context, AttributeSet attrs) &#123;</span><br><span class="line">       <span class="keyword">this</span>(context, attrs, com.android.<span class="keyword">internal</span>.R.attr.editTextStyle);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> EditText(Context context, AttributeSet attrs, int defStyleAttr) &#123;</span><br><span class="line">       <span class="keyword">this</span>(context, attrs, defStyleAttr, <span class="number">0</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> EditText(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) &#123;</span><br><span class="line">       <span class="keyword">super</span>(context, attrs, defStyleAttr, defStyleRes);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <p>而我们如果使用 IDE 自动提示的 @JvmOverload</p>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/2874486-b6becd80c300f654.png" alt="idea"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/2874486-b6becd80c300f654.png" alt="idea"></p>
 <p>写出来的代码长这样：</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">InputVIew</span> <span class="meta">@JvmOverloads</span> <span class="keyword">constructor</span></span>(</span><br><span class="line">        context: Context, attrs: AttributeSet? = <span class="literal">null</span>, defStyleAttr: <span class="built_in">Int</span> = <span class="number">0</span></span><br><span class="line">) : EditText(context, attrs, defStyleAttr) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>看到了么，你的代码 defStyleAttr 默认是 0 而不是 com.android.internal.R.attr.editTextStyle 。</p>
@@ -892,7 +892,7 @@ var ap = new APlayer({
     music: {                                                           // Required, music info, see: ###With playlist
         title: '你好，北京',                                          // Required, music title
         author: 'Eicky',                          // Required, music author
-        url: 'http://www.ytmp3.cn/down/58617.mp3',  // Required, music url
+        url: 'http://m10.music.126.net/20200909115206/2e634e2e96be73bd11bf537248bfcacf/ymusic/8079/77f3/144d/c4694ae4ca27b207fa4659eb7e0ff06b.mp3',  // Required, music url
         pic: '/images/visitor.jpg',  // Optional, music picture
     }
 });

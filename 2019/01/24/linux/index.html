@@ -144,22 +144,22 @@
 <meta property="og:site_name" content="Eicky Blog">
 <meta property="og:description" content="[toc]   /proc/meminfo 查看RAM使用情况最简单的方法是通过/proc/meminfo。这个动态更新的虚拟文件实际上是许多其他内存相关工具(如：free / ps / top)等的组合显示。/proc/meminfo列出了所有你想了解的内存的使用情况。进程的内存使用信息也可以通过/proc//statm 和 /proc//status 来查看。 1cat /proc/mem">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102296249-0.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102294044-1.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/11022932F-2.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102296409-3.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102292A2-4.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102295B3-5.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102291392-6.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102292342-7.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/11022a1F-8.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102295208-9.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102293c8-10.jpg">
-<meta property="og:updated_time" content="2019-07-12T09:47:54.736Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102296249-0.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102294044-1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/11022932F-2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102296409-3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102292A2-4.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102295B3-5.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102291392-6.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102292342-7.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/11022a1F-8.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102295208-9.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102293c8-10.jpg">
+<meta property="og:updated_time" content="2020-07-27T07:58:56.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下查看内存使用情况方法总结">
 <meta name="twitter:description" content="[toc]   /proc/meminfo 查看RAM使用情况最简单的方法是通过/proc/meminfo。这个动态更新的虚拟文件实际上是许多其他内存相关工具(如：free / ps / top)等的组合显示。/proc/meminfo列出了所有你想了解的内存的使用情况。进程的内存使用信息也可以通过/proc//statm 和 /proc//status 来查看。 1cat /proc/mem">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102296249-0.jpg">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102296249-0.jpg">
 
 
 
@@ -438,8 +438,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-12T17:47:54+08:00">
-                2019-07-12
+              <time title="更新于" itemprop="dateModified" datetime="2020-07-27T15:58:56+08:00">
+                2020-07-27
               </time>
             
           </span>
@@ -543,61 +543,61 @@
 <li><p>/proc/meminfo</p>
 <p>查看RAM使用情况最简单的方法是通过/proc/meminfo。这个动态更新的虚拟文件实际上是许多其他内存相关工具(如：free / ps / top)等的组合显示。/proc/meminfo列出了所有你想了解的内存的使用情况。进程的内存使用信息也可以通过/proc/<pid>/statm 和 /proc/<pid>/status 来查看。</pid></pid></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/meminfo</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102296249-0.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102296249-0.jpg" alt></p>
 </li>
 </ul>
 <ul>
 <li><p>atop</p>
 <p>atop命令是一个终端环境的监控命令。它显示的是各种系统资源（CPU, memory, network, I/O, kernel）的综合，并且在高负载的情况下进行了彩色标注。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo atop</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102294044-1.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102294044-1.jpg" alt></p>
 </li>
 <li><p>free</p>
 <p>free命令是一个快速查看内存使用情况的方法，它是对 /proc/meminfo 收集到的信息的一个概述。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -h</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/11022932F-2.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/11022932F-2.jpg" alt></p>
 </li>
 </ul>
 <ul>
 <li><p>GNOME System Monitor</p>
 <p>GNOME System Monitor 是一个显示最近一段时间内的CPU、内存、交换区及网络的使用情况的视图工具。它还提供了一种查看CPU及内存使用情况的方法。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gnome-system-monitor</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102296409-3.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102296409-3.jpg" alt></p>
 </li>
 <li><p>htop</p>
 <p>htop命令显示了每个进程的内存实时使用率。它提供了所有进程的常驻内存大小、程序总内存大小、共享库大小等的报告。列表可以水平及垂直滚动。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htop</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102292A2-4.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102292A2-4.jpg" alt></p>
 </li>
 <li><p>KDE System Monitor</p>
 <p>功能同 4 中介绍的GENOME版本。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ksysguard</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102295B3-5.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102295B3-5.jpg" alt></p>
 </li>
 <li><p>memstat</p>
 <p>memstat是一个有效识别executable(s), process(es) and shared libraries使用虚拟内存情况的命令。给定一个进程ID，memstat可以列出这个进程相关的可执行文件、数据和共享库。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">memstat -p &lt;PID&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102291392-6.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102291392-6.jpg" alt></p>
 </li>
 <li><p>nmon</p>
 <p>nmon是一个基于ncurses的系统基准测试工具，它可以监控CPU、内存、I/O、文件系统及网络资源等的互动模式。对于内存的使用，它可以实时的显示 总/剩余内存、交换空间等信息。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmon</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102292342-7.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102292342-7.jpg" alt></p>
 </li>
 <li><p>ps </p>
 <p>ps命令可以实时的显示各个进程的内存使用情况。Reported memory usage information includes %MEM (percent of physical memory used), VSZ (total amount of virtual memory used), and RSS (total amount of physical memory used)。你可以使用 “–sort”选项对进程进行排序，例如按RSS进行排序：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux --sort -rss</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/11022a1F-8.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/11022a1F-8.jpg" alt></p>
 </li>
 <li><p>smem</p>
 <p>smem命令允许你统计基于/proc信息的不同进程和用户的内存使用情况。内存使用情况的分析可以导出图表（如条形图和饼图）。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo smem --pie name -c &quot;pss&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102295208-9.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102295208-9.jpg" alt></p>
 </li>
 <li><p>top </p>
 <p>top命令提供了实时的运行中的程序的资源使用统计。你可以根据内存的使用和大小来进行排序。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/1102293c8-10.jpg" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/1102293c8-10.jpg" alt></p>
 </li>
 <li><p>vmstat</p>
 <p>vmstat命令显示实时的和平均的统计，覆盖CPU、内存、I/O等内容。例如内存情况，不仅显示物理内存，也统计虚拟内存。</p>
@@ -699,8 +699,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/17/sms/" rel="next" title="国内国外免费接收短信验证码：国外14个网站国内1个网站">
-                <i class="fa fa-chevron-left"></i> 国内国外免费接收短信验证码：国外14个网站国内1个网站
+              <a href="/2019/01/17/java/" rel="next" title="Mac 上 Class JavaLaunchHelper is implemented in both 报错">
+                <i class="fa fa-chevron-left"></i> Mac 上 Class JavaLaunchHelper is implemented in both 报错
               </a>
             
           </div>
@@ -936,7 +936,7 @@ var ap = new APlayer({
     music: {                                                           // Required, music info, see: ###With playlist
         title: '你好，北京',                                          // Required, music title
         author: 'Eicky',                          // Required, music author
-        url: 'http://www.ytmp3.cn/down/58617.mp3',  // Required, music url
+        url: 'http://m10.music.126.net/20200909115206/2e634e2e96be73bd11bf537248bfcacf/ymusic/8079/77f3/144d/c4694ae4ca27b207fa4659eb7e0ff06b.mp3',  // Required, music url
         pic: '/images/visitor.jpg',  // Optional, music picture
     }
 });

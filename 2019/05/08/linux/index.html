@@ -144,14 +144,14 @@
 <meta property="og:site_name" content="Eicky Blog">
 <meta property="og:description" content="[toc]  今天来讲下小鸡(国外vps或者服务器)的线路问题 先了解几个线路概念 电信163骨干网或者163骨干网  电信骨干网络，通常就是我们说的163骨干网，也就是我们通常说的AS4134接入的带宽，是中国电信的骨干网络，也就是我们经常看到202.97开头的节点，此网络负责了90%的电信业务负载（163有电信整个海外出口的90%带宽容量），因为用的人多，线路没有优化，所以在晚高峰会出现线">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/cn_163.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/cn2_gt.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/cn2_gia.png">
-<meta property="og:updated_time" content="2019-07-12T09:47:54.737Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/cn_163.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/cn2_gt.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/cn2_gia.png">
+<meta property="og:updated_time" content="2020-07-27T07:58:56.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器承载网络（线路类型）">
 <meta name="twitter:description" content="[toc]  今天来讲下小鸡(国外vps或者服务器)的线路问题 先了解几个线路概念 电信163骨干网或者163骨干网  电信骨干网络，通常就是我们说的163骨干网，也就是我们通常说的AS4134接入的带宽，是中国电信的骨干网络，也就是我们经常看到202.97开头的节点，此网络负责了90%的电信业务负载（163有电信整个海外出口的90%带宽容量），因为用的人多，线路没有优化，所以在晚高峰会出现线">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/cn_163.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/cn_163.png">
 
 
 
@@ -430,8 +430,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-12T17:47:54+08:00">
-                2019-07-12
+              <time title="更新于" itemprop="dateModified" datetime="2020-07-27T15:58:56+08:00">
+                2020-07-27
               </time>
             
           </span>
@@ -562,15 +562,15 @@
 <h3 id="如何判断线路类型"><a href="#如何判断线路类型" class="headerlink" title="如何判断线路类型"></a>如何判断线路类型</h3><p>我们可以用<a href="https://tools.ipip.net/traceroute.php" target="_blank" rel="noopener">ipip.net</a>提供的traceroute查看我们的去程就能看到服务器的线路了</p>
 <ul>
 <li><p>163骨干网</p>
-<p>  <img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/cn_163.png" alt></p>
+<p>  <img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/cn_163.png" alt></p>
 <p>  可以看到整个路由节点信息中，全程没有59.43高速cn2节点，并且一些省级或者出口节点是以202.97开头的，所以我们就可以判断承载网络就是163骨干网（其实就是普通线路）</p>
 </li>
 <li><p>CN2 GT</p>
-<p>  <img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/cn2_gt.png" alt></p>
+<p>  <img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/cn2_gt.png" alt></p>
 <p>  在路由节点中，出现了59.43开头的节点，但是在一些出口节点，仍然是202.97开头的节点，这就是CN2 GT线路</p>
 </li>
 <li><p>CN2 GIA</p>
-<p>  <img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/cn2_gia.png" alt></p>
+<p>  <img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/cn2_gia.png" alt></p>
 <p>  从这个路由节点来看，就知道这肯定是明显线路了，也就是CN2 GIA，全程59.43节点，没有出现202.97节点，所以此承载网络就是CN2 GIA，延迟也能看出这个线路的优质，跳数也比较少</p>
 </li>
 </ul>
@@ -917,7 +917,7 @@ var ap = new APlayer({
     music: {                                                           // Required, music info, see: ###With playlist
         title: '你好，北京',                                          // Required, music title
         author: 'Eicky',                          // Required, music author
-        url: 'http://www.ytmp3.cn/down/58617.mp3',  // Required, music url
+        url: 'http://m10.music.126.net/20200909115206/2e634e2e96be73bd11bf537248bfcacf/ymusic/8079/77f3/144d/c4694ae4ca27b207fa4659eb7e0ff06b.mp3',  // Required, music url
         pic: '/images/visitor.jpg',  // Optional, music picture
     }
 });

@@ -144,12 +144,12 @@
 <meta property="og:site_name" content="Eicky Blog">
 <meta property="og:description" content="[toc]  背景最近有个需求，要求APP不能使用截图，以前没有弄过这种需求，有点摸不着头脑，自己的思路是拦截截屏的        快捷键，然而并不需要这么复杂 方法接入过银联的就知道银联在支付的时候，是无法截图的，在AS里面的截图也无法使用，然后就去看银联的源码，发现了新大陆，里面的BaseActivity有行代码是这样写的  this.getWindow().addFlags(8192);">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/4163536378.jpg">
-<meta property="og:updated_time" content="2019-07-12T09:47:54.730Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/4163536378.jpg">
+<meta property="og:updated_time" content="2020-07-27T07:58:56.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="让APP无法使用截图功能">
 <meta name="twitter:description" content="[toc]  背景最近有个需求，要求APP不能使用截图，以前没有弄过这种需求，有点摸不着头脑，自己的思路是拦截截屏的        快捷键，然而并不需要这么复杂 方法接入过银联的就知道银联在支付的时候，是无法截图的，在AS里面的截图也无法使用，然后就去看银联的源码，发现了新大陆，里面的BaseActivity有行代码是这样写的  this.getWindow().addFlags(8192);">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/4163536378.jpg">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/4163536378.jpg">
 
 
 
@@ -428,8 +428,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-12T17:47:54+08:00">
-                2019-07-12
+              <time title="更新于" itemprop="dateModified" datetime="2020-07-27T15:58:56+08:00">
+                2020-07-27
               </time>
             
           </span>
@@ -538,7 +538,7 @@
 <blockquote>
 <p>this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);</p>
 </blockquote>
-<p>然后我们去查询8192,Android的系统常量一般是16进制的，故8192对应的16进制为0x2000<br>所以我们进入到WindowManager.LayoutParams去看看，搜索2000，发现FLAG_SECURE<br><img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/4163536378.jpg" alt="QQ截图20161107111355.jpg"></p>
+<p>然后我们去查询8192,Android的系统常量一般是16进制的，故8192对应的16进制为0x2000<br>所以我们进入到WindowManager.LayoutParams去看看，搜索2000，发现FLAG_SECURE<br><img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/4163536378.jpg" alt="QQ截图20161107111355.jpg"></p>
 <p>看这个名字也就知道了吧，上面注释说的是:这个标志是用来将窗口内容视为安全的，它不会出现在屏幕截图里面.</p>
 <p>也就是说：我们自己的Activity，只要加上了这个标志，就会变得“安全”，就不能使用屏幕截图.</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>要让APP无法使用截图功能,就直接写一个基类Activity，在onCreate方法中加入</p>
@@ -886,7 +886,7 @@ var ap = new APlayer({
     music: {                                                           // Required, music info, see: ###With playlist
         title: '你好，北京',                                          // Required, music title
         author: 'Eicky',                          // Required, music author
-        url: 'http://www.ytmp3.cn/down/58617.mp3',  // Required, music url
+        url: 'http://m10.music.126.net/20200909115206/2e634e2e96be73bd11bf537248bfcacf/ymusic/8079/77f3/144d/c4694ae4ca27b207fa4659eb7e0ff06b.mp3',  // Required, music url
         pic: '/images/visitor.jpg',  // Optional, music picture
     }
 });

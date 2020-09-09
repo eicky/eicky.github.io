@@ -144,14 +144,14 @@
 <meta property="og:site_name" content="Eicky Blog">
 <meta property="og:description" content="[toc]  昨天我们大致看了下Docker的基础操作，今天就顺势用Docker安装一下mysql吧，还是相当简单的（当然是相对于不借助docker安装来说的，手动滑稽 - -） 生成镜像第一种：我们用人家编译好的镜像安装吧 首先在Docker里面搜索一下mysql     可以看到搜索出来了N多的mysql镜像，你可以选择你想要的镜像进行安装，不过我就给你用官方的最新版安装吧  下载mysq">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/docker_search_mysql.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/dockerhub_mysql.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/docker_mysql_images.png">
-<meta property="og:updated_time" content="2019-07-12T09:47:54.736Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/docker_search_mysql.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/dockerhub_mysql.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/docker_mysql_images.png">
+<meta property="og:updated_time" content="2020-07-27T07:58:56.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker下安装mysql">
 <meta name="twitter:description" content="[toc]  昨天我们大致看了下Docker的基础操作，今天就顺势用Docker安装一下mysql吧，还是相当简单的（当然是相对于不借助docker安装来说的，手动滑稽 - -） 生成镜像第一种：我们用人家编译好的镜像安装吧 首先在Docker里面搜索一下mysql     可以看到搜索出来了N多的mysql镜像，你可以选择你想要的镜像进行安装，不过我就给你用官方的最新版安装吧  下载mysq">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/eicky/BlogResource/master/img/docker_search_mysql.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/docker_search_mysql.png">
 
 
 
@@ -430,8 +430,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-12T17:47:54+08:00">
-                2019-07-12
+              <time title="更新于" itemprop="dateModified" datetime="2020-07-27T15:58:56+08:00">
+                2020-07-27
               </time>
             
           </span>
@@ -534,15 +534,15 @@
 <p>昨天我们大致看了下Docker的基础操作，今天就顺势用Docker安装一下mysql吧，还是相当简单的（当然是相对于不借助docker安装来说的，手动滑稽 - -）</p>
 <h2 id="生成镜像"><a href="#生成镜像" class="headerlink" title="生成镜像"></a>生成镜像</h2><h3 id="第一种：我们用人家编译好的镜像安装吧"><a href="#第一种：我们用人家编译好的镜像安装吧" class="headerlink" title="第一种：我们用人家编译好的镜像安装吧"></a>第一种：我们用人家编译好的镜像安装吧</h3><ul>
 <li><p>首先在Docker里面搜索一下mysql</p>
-<p>  <img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/docker_search_mysql.png" alt><br>  可以看到搜索出来了N多的mysql镜像，你可以选择你想要的镜像进行安装，不过我就给你用官方的最新版安装吧</p>
+<p>  <img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/docker_search_mysql.png" alt><br>  可以看到搜索出来了N多的mysql镜像，你可以选择你想要的镜像进行安装，不过我就给你用官方的最新版安装吧</p>
 </li>
 <li><p>下载mysql</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql</span><br></pre></td></tr></table></figure>
-  <font color="red"><br>  注：如果需要特定版本，你可以在下载的时候加tag<br><br>  eg:docker pull mysql:5.7<br><br>  具体有哪些版本，可以上<a href="https://hub.docker.com/_/mysql?tab=tags" target="_blank" rel="noopener">Dockerhub &gt; mysql</a>查看<br>  <img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/dockerhub_mysql.png" alt><br>  </font>
+  <font color="red"><br>  注：如果需要特定版本，你可以在下载的时候加tag<br><br>  eg:docker pull mysql:5.7<br><br>  具体有哪些版本，可以上<a href="https://hub.docker.com/_/mysql?tab=tags" target="_blank" rel="noopener">Dockerhub &gt; mysql</a>查看<br>  <img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/dockerhub_mysql.png" alt><br>  </font>
 </li>
 <li><p>查看我们下载的mysql镜像</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images | grep mysql</span><br></pre></td></tr></table></figure>
-<p>  <img src="https://raw.githubusercontent.com/eicky/BlogResource/master/img/docker_mysql_images.png" alt></p>
+<p>  <img src="https://cdn.jsdelivr.net/gh/eicky/BlogResource/img/docker_mysql_images.png" alt></p>
 </li>
 </ul>
 <h3 id="第二种：通过Dockerfile构建"><a href="#第二种：通过Dockerfile构建" class="headerlink" title="第二种：通过Dockerfile构建"></a>第二种：通过Dockerfile构建</h3><ul>
@@ -916,7 +916,7 @@ var ap = new APlayer({
     music: {                                                           // Required, music info, see: ###With playlist
         title: '你好，北京',                                          // Required, music title
         author: 'Eicky',                          // Required, music author
-        url: 'http://www.ytmp3.cn/down/58617.mp3',  // Required, music url
+        url: 'http://m10.music.126.net/20200909115206/2e634e2e96be73bd11bf537248bfcacf/ymusic/8079/77f3/144d/c4694ae4ca27b207fa4659eb7e0ff06b.mp3',  // Required, music url
         pic: '/images/visitor.jpg',  // Optional, music picture
     }
 });
